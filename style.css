@@ -4,12 +4,13 @@ body {
        */
     font: 100%/1.5 system-ui;
     max-width: 100ch;
-    margin-inline: 60px auto
+    margin-inline: 60px auto;
+    padding: 1rem; 
   }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin-inline: 60px auto
+    margin-inline: 60px auto;
   }
