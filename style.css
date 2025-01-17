@@ -32,9 +32,10 @@ nav {
   color: inherit;
   text-align: center; 
   padding: 0.5em;
-  border-top-width: 1px; 
-  border-top-style: solid; 
-  border-top-color:oklch(80% 3% 200); 
+  margin-bottom: 20px;
+  border-bottom-width: 1px; 
+  border-bottom-style: solid; 
+  border-bottom-color:oklch(80% 3% 200); 
 
   /*margin-top: 50px; 
   #border-top-width: 1px; 
@@ -56,7 +57,7 @@ nav li{
   margin: 0 15px; 
 }
 
-nav  a {
+nav a {
   text-decoration: none;
   color: inherit;
   text-align: center; 
