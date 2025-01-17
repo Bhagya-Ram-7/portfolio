@@ -32,6 +32,10 @@ img {
   color: inherit;
   text-align: center; 
   padding: 0.5em;
+  border-top-width: 1px; 
+  border-top-style: solid; 
+  border-top-color:oklch(80% 3% 200); 
+
   /*margin-top: 50px; 
   #border-top-width: 1px; 
   border-top-style: solid; 
@@ -59,7 +63,7 @@ img {
 }
 
 :root {
-  --color-accent:#B2AC88
+  --color-accent:oklch(65% 50% 0); 
 }
 
 html{
