@@ -48,11 +48,17 @@ img {
   justify-content: center; 
   margin: 0; 
   padding: 0; 
+  border-top-width: 1px; 
+  border-top-style: solid; 
+  border-top-color:oklch(80% 3% 200);
 }
 
 .navbar li{
   flex:1; 
   margin: 0 15px; 
+  border-top-width: 1px; 
+  border-top-style: solid; 
+  border-top-color:oklch(80% 3% 200);
 }
 
 .navbar a {
@@ -60,6 +66,9 @@ img {
   color: inherit;
   text-align: center; 
   padding: 0.5em;
+  border-top-width: 1px; 
+  border-top-style: solid; 
+  border-top-color:oklch(80% 3% 200);
 }
 
 :root {
