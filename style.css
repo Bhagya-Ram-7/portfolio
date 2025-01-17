@@ -81,7 +81,7 @@ nav a.hover{
 }
 */
 
-.next {
+.next:hover {
   border-bottom-color:var(--color-accent); 
   border-bottom-width: 0.5em;
 }
