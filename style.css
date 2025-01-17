@@ -14,3 +14,11 @@ img {
     display: block;
     margin-inline: 60px auto;
   }
+
+nav {
+  display:flex; 
+}
+
+nav a {
+  flex:1; 
+}
