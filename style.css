@@ -48,18 +48,12 @@ nav ul {
   justify-content: center; 
   margin: 0; 
   padding: 0; 
-  border-top-width: 1px; 
-  border-top-style: solid; 
-  border-top-color:oklch(80% 3% 200);
 }
 
 nav li{
   flex:1; 
   justify-content: center; 
   margin: 0 15px; 
-  border-top-width: 1px; 
-  border-top-style: solid; 
-  border-top-color:oklch(80% 3% 200);
 }
 
 nav  a {
@@ -67,9 +61,6 @@ nav  a {
   color: inherit;
   text-align: center; 
   padding: 0.5em;
-  border-top-width: 1px; 
-  border-top-style: solid; 
-  border-top-color:oklch(80% 3% 200);
 }
 
 /* 
