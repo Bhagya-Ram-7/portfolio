@@ -66,19 +66,19 @@ nav a.current {
 }
 
 
-
 :root {
-  --color-accent:oklch(65% 50% 0); 
+  --color-accent:oklch(65% 50% 120); 
 }
 
 html{
   accent-color: var(--color-accent); 
 }
 
-.navrbar a:hover{
-  color:var(--color-accent); 
+nav a:hover{
+  border-bottom-color:var(--color-accent); 
+  border-bottom-width: 0.5em;
 }
-*/
+
 
 
 /* add margin-bottom, border-bottom-width, border-bottom-style, border-bottom-color */
