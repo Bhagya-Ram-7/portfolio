@@ -6,6 +6,15 @@ body {
     max-width: 100ch;
     margin-inline: 60px auto;
     padding: 1rem; 
+    display:flex; 
+    text-decoration: none;
+    color: inherit;
+    text-align: center; 
+    padding: 0.5em;
+    margin-top: 50px; 
+    border-top-width: 1px; 
+    border-top-style: solid; 
+    border-top-color:oklch(80% 3% 200);
   }
 
 img {
