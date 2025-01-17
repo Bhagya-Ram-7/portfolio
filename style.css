@@ -62,9 +62,10 @@ nav a {
 nav a.current {
   border-bottom-width: 0.5em; 
   border-bottom-color: oklch(80% 3% 200);
+  border-bottom-style:solid; 
 }
 
-/* 
+
 
 :root {
   --color-accent:oklch(65% 50% 0); 
