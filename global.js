@@ -52,7 +52,7 @@ for (let p of pages) {
     }
 }
 
-/*
+
 document.body.insertAdjacentHTML(
     'afterbegin',
     `
@@ -65,7 +65,7 @@ document.body.insertAdjacentHTML(
           </select>
       </label>`
   );
-*/
+
   
 
 
