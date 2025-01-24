@@ -18,8 +18,8 @@ function $$(selector, context = document) {
   
 let pages = [
     { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'contact/', title: 'Contact' },
+    { url: 'projects/index.html', title: 'Projects' },
+    { url: 'contact/index.html', title: 'Contact' },
     { url: 'resume.html', title: 'Resume' },
     { url: 'https://github.com/Bhagya-Ram-7', title: 'GitHub' },
 ];
@@ -52,10 +52,11 @@ for (let p of pages) {
     }
 }
 
+/*
 document.body.insertAdjacentHTML(
     'afterbegin',
     `
-      <label class="color-scheme">    
+      <label class="color-scheme" position: absolute>    
           Theme:
           <select>    
           <option value="light dark" selected>Automatic</option>        
@@ -64,6 +65,7 @@ document.body.insertAdjacentHTML(
           </select>
       </label>`
   );
+*/
   
 
 
