@@ -52,19 +52,7 @@ for (let p of pages) {
     }
 }
 
-document.body.insertAdjacentHTML(
-    'afterbegin',
-    `
-      <label class="color-scheme" position: absolute>    
-          Theme:
-          <select>    
-          <option value="light dark" selected>Automatic</option>        
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>  
-          </select>
-      </label>`
 
-  );
 
 
 
