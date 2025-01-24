@@ -18,9 +18,9 @@ function $$(selector, context = document) {
   
 let pages = [
     { url: '', title: 'Home' },
-    { url: '/projects/', title: 'Projects' },
-    { url: 'contact/', title: 'Contact' },
-    { url: 'resume.html', title: 'Resume' },
+    { url: '/portfolio/projects/', title: 'Projects' },
+    { url: '/portfolio/contact/', title: 'Contact' },
+    { url: '/portfolio/resume.html', title: 'Resume' },
     { url: 'https://github.com/Bhagya-Ram-7', title: 'GitHub' },
 ];
 
@@ -32,14 +32,12 @@ for (let p of pages) {
     let url = p.url;
     let title = p.title;
     url = !ARE_WE_HOME && !url.startsWith('https') ? '../' + url : url;
-    nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
-    
-    //let a = document.createElement('a');
-    //a.href = url;
-    //a.textContent = title;
-    //nav.append(a)
 
-    
+    let a = document.createElement('a');
+    a.href = url;
+    a.textContent = title;
+    nav.append(a)
+
     //a.classList.toggle(
       //  'current',
         //a.host === location.host && a.pathname === location.pathname
@@ -47,7 +45,7 @@ for (let p of pages) {
 
     if (a.host === location.host && a.pathname === location.pathname) {
         a.classList.add('current');
-      }
+    }
 
     if (a.host != location.host){
         a.target = "_blank"; 
