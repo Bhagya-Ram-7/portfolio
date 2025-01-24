@@ -18,7 +18,7 @@ if (currentLink) {
   
 let pages = [
     { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
+    { url: '/projects/', title: 'Projects' },
     { url: 'contact/', title: 'Contact' },
     { url: 'resume.html', title: 'Resume' },
     { url: 'https://github.com/Bhagya-Ram-7', title: 'GitHub' },
