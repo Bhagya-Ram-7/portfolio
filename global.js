@@ -69,11 +69,13 @@ let select = document.querySelector('select');
 if ("colorScheme" in localStorage){
     document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
     select.value = localStorage.colorScheme; 
+    console.log(localStorage); 
 } 
 select.addEventListener('input', function (event) {
     document.documentElement.style.setProperty('color-scheme', event.target.value);
     console.log('color scheme changed to', event.target.value);
     localStorage.colorScheme = event.target.value; 
+    console.log(localStorage); 
 });
 
 
