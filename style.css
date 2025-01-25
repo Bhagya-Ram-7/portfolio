@@ -172,6 +172,10 @@ h1, h2, h3, h4, h5, h6 {
   right: 1rem; 
 }
 
+input, textarea, button, select {
+  font-size: 80%;
+}
+
 
 
 
