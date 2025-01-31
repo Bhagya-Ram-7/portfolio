@@ -176,8 +176,25 @@ input, textarea, button, select {
   font-size: 80%;
 }
 
+/*
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 10px;
+  text-align: left;
+}
 
+.stats-grid dt {
+  font-weight: bold;
+  grid-row: 1; 
+}
 
+.stats-grid dd {
+  margin: 0;
+  grid-row: 1; 
+}
+
+*/
 
 /* add display: flex; */
 /* border-bottom-color:var(--color-accent); */
