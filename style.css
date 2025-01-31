@@ -110,13 +110,15 @@ form input[type='submit'] {
 
 article {
   display: grid;
+  display:flex;
+  flex-direction: column;
   grid-template-rows: subgrid;
   grid-row: span 3; 
   gap: 1em;  
 }
 
 article h2 {
-  margin: 0; 
+  margin: 10; 
 }
 
 h1 {
