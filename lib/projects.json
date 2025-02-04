@@ -1,7 +1,7 @@
 [
 {
     "title": "Analyzing the Impact of Housing Supply & Prices on Homelessness.",
-    "year": "Ongoing",
+    "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developing a simulation model to analyze impact of housing supply and price fluctuation on homelessness in collaboration with Data Science Alliance. Responsibilities: Data collection, preprocessing, feature engineering, model evaluation and performance tuning."
 }, 
@@ -27,27 +27,20 @@
 
 {
     "title": "Assumenda iure placeat sapiente.",
-    "year": "2024",
+    "year": "2023",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Quisquam neque sapiente minima magni iure non quae, ad provident accusantium perspiciatis, aliquam deserunt quas aspernatur sint nulla, sequi quis? Facilis numquam sed id totam. Neque doloremque facere repellat minima."
 }, 
 
 {
     "title": "Assumenda iure placeat sapiente.",
-    "year": "2024",
+    "year": "2023",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Quisquam neque sapiente minima magni iure non quae, ad provident accusantium perspiciatis, aliquam deserunt quas aspernatur sint nulla, sequi quis? Facilis numquam sed id totam. Neque doloremque facere repellat minima."
 }, 
 {
     "title": "Assumenda iure placeat sapiente.",
-    "year": "2024",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Quisquam neque sapiente minima magni iure non quae, ad provident accusantium perspiciatis, aliquam deserunt quas aspernatur sint nulla, sequi quis? Facilis numquam sed id totam. Neque doloremque facere repellat minima."
-}, 
-
-{
-    "title": "Assumenda iure placeat sapiente.",
-    "year": "2024",
+    "year": "2023",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Quisquam neque sapiente minima magni iure non quae, ad provident accusantium perspiciatis, aliquam deserunt quas aspernatur sint nulla, sequi quis? Facilis numquam sed id totam. Neque doloremque facere repellat minima."
 }, 
@@ -68,14 +61,21 @@
 
 {
     "title": "Assumenda iure placeat sapiente.",
-    "year": "2024",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Quisquam neque sapiente minima magni iure non quae, ad provident accusantium perspiciatis, aliquam deserunt quas aspernatur sint nulla, sequi quis? Facilis numquam sed id totam. Neque doloremque facere repellat minima."
+}, 
+
+{
+    "title": "Assumenda iure placeat sapiente.",
+    "year": "2022",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Quisquam neque sapiente minima magni iure non quae, ad provident accusantium perspiciatis, aliquam deserunt quas aspernatur sint nulla, sequi quis? Facilis numquam sed id totam. Neque doloremque facere repellat minima."
 },
 
 {
     "title": "Assumenda iure placeat sapiente.",
-    "year": "2024",
+    "year": "2022",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Quisquam neque sapiente minima magni iure non quae, ad provident accusantium perspiciatis, aliquam deserunt quas aspernatur sint nulla, sequi quis? Facilis numquam sed id totam. Neque doloremque facere repellat minima."
 }

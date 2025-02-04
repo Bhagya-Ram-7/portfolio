@@ -155,8 +155,6 @@ h3, h4, h5, h6 {
   line-height: 1.1; 
 }
 
-
-
 .resume {
   max-width: 800px;
   margin: 20px auto;
@@ -232,28 +230,50 @@ input, textarea, button, select {
   font-weight: bold;
 }
 
+svg {
+  max-width: 20em;
+  margin-block: 2em;
 
-/*
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 10px;
-  text-align: left;
+  /* Do not clip shapes outside the viewBox */
+  overflow: visible;
 }
 
-.stats-grid dt {
-  font-weight: bold;
-  grid-row: 1; 
+.legend {
+  display: flex;
+  flex:1;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 150px 0;
+  padding: 0;
 }
 
-.stats-grid dd {
-  margin: 0;
-  grid-row: 1; 
+.legend li {
+  display: flex;
+  align-items: center;
+  margin: 30px;
 }
 
-*/
+.legend .swatch {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 4px;
+  background-color: var(--color);
+}
 
-/* add display: flex; */
-/* border-bottom-color:var(--color-accent); */
-/*border-bottom-width: 0.5em;*/
-/*border-bottom-style: solid; */
+.container {
+  display: flex;
+  align-items: right;
+}
+
+.container legend {
+  align-items: right;
+}
+
+.searchBar {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  width: 850px;
+  height: 30px;
+}

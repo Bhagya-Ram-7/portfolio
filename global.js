@@ -3,18 +3,6 @@ console.log('IT’S ALIVE!');
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
-
-//let navLinks = $$("nav a"); 
-
-//let currentLink = navLinks.find(
-  //  (a) => a.host === location.host && a.pathname === location.pathname
-  //);
-
-//if (currentLink) {
-    // or if (currentLink !== undefined)
-   // currentLink.classList.add('current');
-//  }
-
   
 let pages = [
     { url: '', title: 'Home' },
@@ -37,11 +25,6 @@ for (let p of pages) {
     a.href = url;
     a.textContent = title;
     nav.append(a)
-
-    //a.classList.toggle(
-      //  'current',
-        //a.host === location.host && a.pathname === location.pathname
-    //);
 
     if (a.host === location.host && a.pathname === location.pathname) {
         a.classList.add('current');
@@ -99,11 +82,8 @@ export async function fetchJSON(url) {
 }
 
 export function renderProjects(projects, containerElement,  headingLevel = 'h2') {
-    //containerElement.innerHTML = '';
-    if (!containerElement){
-        console.error("container element error")
-        return;
-    }
+    containerElement.innerHTML = '';
+
     projects.forEach(project=> {
         const article = document.createElement('article');
         article.innerHTML = `
