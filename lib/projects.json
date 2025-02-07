@@ -12,17 +12,17 @@
     "description": "Analyzed food.com dataset in collaboration with friend for DSC 80 final project. Built regression model with StandardScaler and GradientBoostingRegressor. Used RandomizedSearchCV for hyperparameter tuning."
 },
 {
-    "title": "Assumenda iure placeat sapiente.",
-    "year": "2024",
+    "title": "Deriving Value from Transaction Data",
+    "year": "2023",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Quisquam neque sapiente minima magni iure non quae, ad provident accusantium perspiciatis, aliquam deserunt quas aspernatur sint nulla, sequi quis? Facilis numquam sed id totam. Neque doloremque facere repellat minima."
+    "description": "Worked with 3 peers under guidance of Deloitte consultant to perform extensive analysis of e-commerce dataset of over 90,000 records. Translated patterns & model predictions into actionable insights & business strategy recommendations. Presented findings to Deloitte and Halicioglu Data Science Institute experts through engaging data visualization."
 }, 
 
 {
-    "title": "Assumenda iure placeat sapiente.",
-    "year": "2024",
+    "title": "Africa Economic Crisis Analysis",
+    "year": "2022",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Quisquam neque sapiente minima magni iure non quae, ad provident accusantium perspiciatis, aliquam deserunt quas aspernatur sint nulla, sequi quis? Facilis numquam sed id totam. Neque doloremque facere repellat minima."
+    "description": "Analyzed economic and banking data from 13 African countries. Used Tableau to visualize trends & performed background research to gain context for patterns and outliers observed. "
 }, 
 
 {
