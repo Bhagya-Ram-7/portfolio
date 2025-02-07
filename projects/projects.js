@@ -1,6 +1,6 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
+//let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
 import { fetchJSON, renderProjects } from '../global.js';
 const projects = await fetchJSON('../lib/projects.json');
@@ -13,6 +13,36 @@ if (projectsTitle) {
 const profileStats = document.querySelector('#profile-stats .stats-grid');
 renderProjects(projects, projectsContainer, 'h2');
 
+/*
+// Refactor all plotting into one function
+function renderPieChart(projectsGiven) {
+    // re-calculate rolled data
+    let newRolledData = d3.rollups(
+      projectsGiven,
+      (v) => v.length,
+      (d) => d.year,
+    );
+    // re-calculate data
+    let newData = newRolledData.map(([year, count]) => {
+        return { value: count, label: year }; 
+    });
+    // re-calculate slice generator, arc data, arc, etc.
+    let newSliceGenerator = d3.pie().value((d) => d.value);
+    let newArcData = newSliceGenerator(newData);
+    let newArcs = newArcData.map((d) => arcGenerator(d));
+    newArcs.forEach((arc, idx) => {
+        d3.select('svg').append('path').attr('d', arc).attr('fill', colors(idx));
+      })
+    
+    let legend = d3.select('.legend');
+    // update paths and legends, refer to steps 1.4 and 2.2
+
+  }
+  // Call this function on page load
+  renderPieChart(projects);
+*/
+
+
 let rolledData = d3.rollups(
   projects,
   (v) => v.length,
@@ -23,9 +53,12 @@ let data = rolledData.map(([year, count]) => {
     return { value: count, label: year };
   });
 
+let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
+
 let sliceGenerator = d3.pie().value((d) => d.value);
 let arcData = sliceGenerator(data);
 let arcs = arcData.map((d) => arcGenerator(d));
+let svg = d3.select('svg');
 arcs.forEach((arc, idx) => {
     d3.select('svg').append('path').attr('d', arc).attr('fill', colors(idx));
   })
@@ -39,9 +72,9 @@ data.forEach((d, idx) => {
 }) 
 
 
+/* 
 let query = '';
 let filteredProjects = [];
-
 function setQuery(newQuery) {
   query = newQuery;
   filteredProjects = projects.filter((project) => {
@@ -52,16 +85,53 @@ function setQuery(newQuery) {
 }
 
 let searchInput = document.getElementsByClassName('searchBar')[0];
-
-searchInput.addEventListener('change', (event) => {
+searchInput.addEventListener('input', (event) => {
   let updatedProjects = setQuery(event.target.value);
   console.log('Filtered:', updatedProjects);
   console.log('Container:', projectsContainer);
   renderProjects(updatedProjects, projectsContainer);
+  renderPieChart(filteredProjects);
 });
 
+let newSVG = d3.select('svg'); 
+newSVG.selectAll('path').remove();
+*/
 
-/* 
+function renderPieChart(projectsGiven) {
+    // re-calculate rolled data
+    let newRolledData = d3.rollups(
+        projectsGiven,
+        (v) => v.length,
+        (d) => d.year,
+      );
+      // re-calculate data
+      let newData = newRolledData.map(([year, count]) => {
+          return { value: count, label: year }; 
+      });
+      // re-calculate slice generator, arc data, arc, etc.
+      let newSliceGenerator = d3.pie().value((d) => d.value);
+      let newArcData = newSliceGenerator(newData);
+      let newArcs = newArcData.map((d) => arcGenerator(d));
+      let newSVG = d3.select('svg');
+      newSVG.selectAll('path').remove();
+      legend.selectAll('li').remove()
+    
+    
+      newArcs.forEach((arc, idx) => {
+          newSVG.append('path').attr('d', arc).attr('fill', colors(idx));
+        })
+      
+      newData.forEach((d, idx) =>{
+        legend.append('li')
+        .attr('style', `--color: ${colors(idx)}`) // set the style attribute while passing in parameters
+        .html(`<span class="swatch"></span> ${d.label } <em> (${d.value})</em>`); // set the inner html of <li>
+    }) 
+  }
+  
+  // Call this function on page load
+  renderPieChart(projects);
+
+
 let query = '';
 function setQuery(newQuery) {
     query = newQuery;
@@ -69,14 +139,29 @@ function setQuery(newQuery) {
         let values = Object.values(project).join('\n').toLowerCase();
         return values.includes(query.toLowerCase());
       });
+    return filteredProjects;
   }
   
   let searchInput = document.getElementsByClassName('searchBar')[0];
   
-  searchInput.addEventListener('change', (event) => {
-    let updatedProjects = setQuery(event.target.value);
-    renderProjects(updatedProjects, projectsContainer);
-  }); */
+  searchInput.addEventListener('input', (event) => {
+    //let updatedProjects = setQuery(event.target.value);
+    let filteredProjects =  setQuery(event.target.value);
+    renderProjects(filteredProjects, projectsContainer);
+    renderPieChart(filteredProjects);
+  }); 
+
+
+
+//});
+
+
+
+// Call this function on page load
+renderPieChart(projects);
+
+
+
 
 
 
