@@ -9,6 +9,7 @@ let pages = [
     { url: 'projects/index.html', title: 'Projects' },
     { url: 'contact/index.html', title: 'Contact' },
     { url: 'resume.html', title: 'Resume' },
+    { url: 'meta/index.html', title: 'Meta' },
     { url: 'https://github.com/Bhagya-Ram-7', title: 'GitHub' },
 ];
 
@@ -106,7 +107,7 @@ export async function fetchGitHubData(username) {
     return fetchJSON(`https://api.github.com/users/${username}`);
   }
 
-//        <${headingLevel}>${project.year}</${headingLevel}>
+
   
 
 

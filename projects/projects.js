@@ -145,7 +145,6 @@ function setQuery(newQuery) {
 let searchInput = document.getElementsByClassName('searchBar')[0];
   
 searchInput.addEventListener('input', (event) => {
-
     //let updatedProjects = setQuery(event.target.value);
     let filteredProjects =  setQuery(event.target.value);
     renderProjects(filteredProjects, projectsContainer);
