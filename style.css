@@ -312,6 +312,10 @@ circle:hover {
   transform: scale(1.5);
 }
 
+circle.selected {
+  fill: #ff6b6b;
+}
+
 
 
 dl.info dt {
@@ -352,19 +356,6 @@ dl.info[hidden]:not(:hover, :focus-within) {
   backdrop-filter: blur(10px) saturate(150%);
 }
 
-/*
-#commit-tooltip dt {
-  font-weight: bold;
-  color: #444;
-  margin-bottom: 4px;
-}*/
-
-/*
-#commit-tooltip dd {
-  margin: 0 0 10px;
-  padding: 2px 0;
-  color: #222;
-}*/
 
 #commit-tooltip a {
   color: #007bff;
@@ -379,11 +370,23 @@ dl.info[hidden]:not(:hover, :focus-within) {
   padding-top: 6px;
 }
 
-
-
 .gridlines line {
   stroke: lightgray;
   stroke-opacity: 0.7;
   shape-rendering: crispEdges;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
 }
 
