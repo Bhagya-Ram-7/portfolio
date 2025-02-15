@@ -53,12 +53,20 @@ let data = rolledData.map(([year, count]) => {
     return { value: count, label: year };
   });
 
+const width = 400;
+const height = 400;
+const radius = Math.min(width, height) / 2;
+
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
 let sliceGenerator = d3.pie().value((d) => d.value);
 let arcData = sliceGenerator(data);
 let arcs = arcData.map((d) => arcGenerator(d));
-//let svg = d3.select('svg');
+let svg = d3.select('svg').attr('width', width)
+.attr('height', height)
+.append('g')
+.attr('transform', `translate(${width / 2}, ${height / 2})`);
+
 arcs.forEach((arc, idx) => {
     d3.select('svg').append('path').attr('d', arc).attr('fill', colors(idx));
   })
@@ -70,32 +78,6 @@ data.forEach((d, idx) => {
             .attr('style', `--color: ${colors(idx)}`) // set the style attribute while passing in parameters
             .html(`<span class="swatch"></span> ${d.label } <em> (${d.value})</em>`); // set the inner html of <li>
 }) 
-
-
-/* 
-let query = '';
-let filteredProjects = [];
-function setQuery(newQuery) {
-  query = newQuery;
-  filteredProjects = projects.filter((project) => {
-    let values = Object.values(project).join('\n').toLowerCase();
-    return values.includes(query.toLowerCase());
-  });
-  return filteredProjects;
-}
-
-let searchInput = document.getElementsByClassName('searchBar')[0];
-searchInput.addEventListener('input', (event) => {
-  let updatedProjects = setQuery(event.target.value);
-  console.log('Filtered:', updatedProjects);
-  console.log('Container:', projectsContainer);
-  renderProjects(updatedProjects, projectsContainer);
-  renderPieChart(filteredProjects);
-});
-
-let newSVG = d3.select('svg'); 
-newSVG.selectAll('path').remove();
-*/
 
 function renderPieChart(projectsGiven) {
     // re-calculate rolled data
@@ -157,7 +139,7 @@ searchInput.addEventListener('input', (event) => {
 renderPieChart(projects);
 
 let selectedIndex = -1;
-let svg = d3.select('svg');
+//let svg = d3.select('svg');
 svg.selectAll('path').remove();
 arcs.forEach((arc, i) => {
     svg.append('path')
