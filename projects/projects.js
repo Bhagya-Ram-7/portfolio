@@ -55,7 +55,7 @@ let data = rolledData.map(([year, count]) => {
 
 const width = 400;
 const height = 400;
-const radius = Math.min(width, height) / 2;
+//const radius = Math.min(width, height) / 2;
 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
