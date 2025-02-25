@@ -1,7 +1,5 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-//let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
-
 import { fetchJSON, renderProjects } from '../global.js';
 const projects = await fetchJSON('../lib/projects.json');
 const projectsContainer = document.querySelector('.projects'); 
@@ -12,36 +10,6 @@ if (projectsTitle) {
 
 const profileStats = document.querySelector('#profile-stats .stats-grid');
 renderProjects(projects, projectsContainer, 'h2');
-
-/*
-// Refactor all plotting into one function
-function renderPieChart(projectsGiven) {
-    // re-calculate rolled data
-    let newRolledData = d3.rollups(
-      projectsGiven,
-      (v) => v.length,
-      (d) => d.year,
-    );
-    // re-calculate data
-    let newData = newRolledData.map(([year, count]) => {
-        return { value: count, label: year }; 
-    });
-    // re-calculate slice generator, arc data, arc, etc.
-    let newSliceGenerator = d3.pie().value((d) => d.value);
-    let newArcData = newSliceGenerator(newData);
-    let newArcs = newArcData.map((d) => arcGenerator(d));
-    newArcs.forEach((arc, idx) => {
-        d3.select('svg').append('path').attr('d', arc).attr('fill', colors(idx));
-      })
-    
-    let legend = d3.select('.legend');
-    // update paths and legends, refer to steps 1.4 and 2.2
-
-  }
-  // Call this function on page load
-  renderPieChart(projects);
-*/
-
 
 let rolledData = d3.rollups(
   projects,
@@ -55,7 +23,6 @@ let data = rolledData.map(([year, count]) => {
 
 const width = 400;
 const height = 400;
-//const radius = Math.min(width, height) / 2;
 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
@@ -139,7 +106,6 @@ searchInput.addEventListener('input', (event) => {
 renderPieChart(projects);
 
 let selectedIndex = -1;
-//let svg = d3.select('svg');
 svg.selectAll('path').remove();
 arcs.forEach((arc, i) => {
     svg.append('path')

@@ -90,11 +90,13 @@ export function renderProjects(projects, containerElement,  headingLevel = 'h2')
         article.innerHTML = `
 
         <${headingLevel}>${project.title}</${headingLevel}>
-        <img src="${project.image}" alt="${project.title}">
-
+        <img src="${project.image}" alt="${project.title}" class="img">
+        
         <div class="project-deets">
             <p class="description">${project.description}</p>
             <p class="year">${project.year}</p>
+            ${project.url ? `<a href="${project.url}" target="_blank">View Project</a><br>` : ''} 
+
 
         </div>
         `;

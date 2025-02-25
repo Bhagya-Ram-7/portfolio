@@ -26,10 +26,11 @@
 }, 
 
 {
-    "title": "Assumenda iure placeat sapiente.",
-    "year": "2023",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Quisquam neque sapiente minima magni iure non quae, ad provident accusantium perspiciatis, aliquam deserunt quas aspernatur sint nulla, sequi quis? Facilis numquam sed id totam. Neque doloremque facere repellat minima."
+    "title": "Geospatial Visualization of Boston Bike Stations",
+    "year": "2025",
+    "image": "../images/bikes_boston.png",
+    "url": "https://bhagya-ram-7.github.io/Boston-bikewatching/",
+    "description": "Utilized D3.js, HTML and CSS to build an interactive geospatial visualization that portays bike lanes, stations and traffic in Boston and Cambridge."
 }, 
 
 {
