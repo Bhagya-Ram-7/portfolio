@@ -18,7 +18,6 @@ nav {
   margin-bottom: 2em;
   border-bottom-width: 0.5px; 
   border-bottom-style: solid; 
-  /*border-bottom-color: oklch(50% 10% 200 / 40%); */
   border-bottom-color: (from hsl(0 100% 50%) l c h); 
   
   

@@ -28,7 +28,7 @@
 {
     "title": "Geospatial Visualization of Boston Bike Stations",
     "year": "2025",
-    "image": "../images/bikes_boston.png",
+    "image": "../images/bikes_boston.PNG",
     "url": "https://bhagya-ram-7.github.io/Boston-bikewatching/",
     "description": "Utilized D3.js, HTML and CSS to build an interactive geospatial visualization that portays bike lanes, stations and traffic in Boston and Cambridge."
 }, 
